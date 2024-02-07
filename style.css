@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    /* font-family: "Times New Roman", Times, serif; */
+    box-sizing: border-box;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 247, 173, 1) 0%,
+      rgba(255, 231, 189, 1) 35%,
+      rgba(255, 180, 238, 1) 100%
+    );
+    background-repeat: no-repeat;
+    width: auto;
+  }
+  /* Header Section  */
+  .header-content {
+    background-color: #ff7171;
+    padding: 10px 0;
+  }
+  .navbar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .navbar > ul > li {
+    display: inline-block;
+    margin-right: 5%;
+  }
+  .navbar > ul > li:last-child {
+    margin-right: 0;
+  }
+  .navbar > ul > li > a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+  }
+  .navbar > ul > li > a:hover {
+    color: #1d2b53;
+  }
+  /* .menubar { */
+    /* width: 28px; */
+  /* } */
+  
+  /* .navbar > div > img { */
+    /* display:block; */
+    /* align-items: center; */
+  /* justify-content: center; */
+  /*  */
+  /* } */
+  /* main-content */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .left-content {
+    flex: 1;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 55px;
+    padding-right: 55px;
+    margin-top: 8%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+  }
+  .left-content-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .left-content-btn {
+    margin-top: 10px;
+    padding: 12px 80px;
+    font-size: 1rem;
+    background-color: #ff7171;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .left-content-btn:hover {
+    background-color: #d63484;
+    color: #000;
+  }
+  .right-content {
+    background-image: url("./images/pexels-robin-stickel-70497.jpg");
+    background-size: cover;
+    background-position: center;
+     height: 100vh; 
+    flex: 1;
+    /* height: 100%; */
+     /* object-fit: cover; */
+     /* object-position: center; */
+  }
+  .right-content img {
+    max-width: 100%;
+    height: 100vh;
+    display: block;
+  }
+  
+  /* overview-section */
+  .overview-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  
+  .left-overview-section {
+    display: flex;
+    flex: 1; /* Equal distribution of space */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .first-img-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .first-img-col img {
+    width: 250px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .second-img-col img {
+    width: 250px;
+    height: 409px;
+  }
+  .right-overview-section {
+    flex: 1; /* Equal distribution of space */
+    background-color: #ff7171;
+    height: 200px;
+    width: 400px;
+    padding: 20px;
+    margin-left: 60px;
+  }
+  #btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  #menu-toggler {
+    display: none;
+  }
+  #hamburger-icon {
+    height: 25px;
+    margin-right: 20px;
+    display: none;
+  }
+  #menu-toggler:checked + label + .navbar {
+    display: block;
+  }
+  .lorem {
+    font-size: 38px;
+  }
+  /* Media Queries */
+  @media only screen and (max-width: 1128px) {
+    /* tablets */
+    .navbar > ul > li {
+      margin-right: 3%;
+    }
+    .navbar {
+      display: none;
+    }
+    #menu-toggler {
+      display: none;
+    }
+    #label-toggler {
+      margin-left: 20px;
+    }
+    #hamburger-icon {
+      display: inline-block;
+    }
+    .main-section {
+      flex-direction: column;
+      padding: 30px;
+      gap: 20px;
+    }
+    .left-content,
+    .right-content {
+      flex: none;
+      width: 100%;
+      padding: 0;
+    }
+    .overview-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .right-overview-section {
+      margin: 0;
+    }
+    .navbar {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* mobiles */
+    body {
+      width: 100%;
+    }
+  
+    .navbar > ul > li {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 8px 0;
+    }
+  
+    .navbar > ul > li > a {
+      display: block;
+      padding: 8px 0;
+    }
+  
+    .first-img-col img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+  
+    .second-img-col img {
+      width: 150px;
+      height: 309px;
+    }
+    nav {
+      display: none;
+    }
+    .right-overview-section {
+      width: 90%;
+      margin: 20px auto;
+      padding: 10px;
+    }
+  }
+  
